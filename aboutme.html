@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Seterkhanov Dias</title>
+  <link rel="stylesheet" href="aboutme.css" />
+</head>
+<body>
+    <!-- 🎥 Background Video -->
+ <video autoplay loop playsinline muted id="bg-video">
+    <source src="Comp 1_3840x2160_prob-3(1).mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Mute/Unmute Toggle Button -->
+  <button class="mute-toggle" onclick="toggleMute()">
+    Mute
+  </button>
+ <!--  JavaScript Mute Control -->
+ <script>
+    function toggleMute() {
+      const video = document.getElementById('bg-video');
+      const button = document.querySelector('.mute-toggle');
+      video.muted = !video.muted;
+      button.textContent = video.muted ? '🔇 Unmute' : '🔊 Mute';
+    }
+
+    window.onload = () => {
+      const video = document.getElementById('bg-video');
+      const button = document.querySelector('.mute-toggle');
+      button.textContent = video.muted ? '🔇 Unmute' : '🔊 Mute';
+    };
+  </script>
+  <div class="about-container">
+    <div class="profile-card">
+      <img src="photo_2025-04-24_15-23-36.jpg" alt="Dias" class="profile-pic" />
+      <h1>Seterkhanov Dias</h1>
+      <p class="tagline">Creative Developer & Video Editor</p>
+    </div>
+
+    <div class="bio-section">
+      <h2>About Me</h2>
+      <p>
+        Hey! My name is Dias. I'm 10th grade student of SBIL.
+        Whether it's coding a cool site or creating cinematic edits, I'm always pushing creative limits.
+        I always try to create appealing, cool stuff and to learn something new in the process.
+        (Btw background edits in my part of the site are made by me, you also can check some of them in my portfolio or on my tik tok).
+      </p>
+      <p>
+        I'm based in Kazakhstan and currently exploring new tools and ways to express ideas through both design and development.
+      </p>
+    </div>
+  </div>
+ 
+</body>
+</html>
